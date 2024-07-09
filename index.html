@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Abstracción</title>
+
+  <!-- BOTÓN FULLSCREEN -->
+  <input id="fullscreen" type="image" src="recursos/fullscreen.png" onclick="fullScreen()">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="libraries/p5.min.js"></script>
+  <script src="navegador.js"></script>
+  <script src="inicio.js"></script>
+  <script src="menu.js"></script>
+  <script src="final.js"></script>
+  <script src="escena01.js"></script>
+  <script src="escena02.js"></script>
+  <script src="escena03.js"></script>
+  <script>
+    function fullScreen() {
+      if ((document.fullScreenElement && document.fullScreenElement !== null) ||
+        (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+        if (document.documentElement.requestFullScreen) {
+          document.documentElement.requestFullScreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+          document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullScreen) {
+          document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+        }
+      } else {
+        if (document.cancelFullScreen) {
+          document.cancelFullScreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen();
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
