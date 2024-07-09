@@ -1,9 +1,12 @@
 class PantallaCuestionario extends Pantalla {
     estado() {
         modulo = 2;
+        this.dialogo = 0;
+        this.foto=imgCuestionario;
     }
     constructor() {
         super();
+        this.foto;
         this.texto = ['Hola', 'somos', 'las preguntas'];
         this.op1 = ['a', 'b', 'c'];
         this.op2 = ['1', '2', '3'];
@@ -17,7 +20,9 @@ class PantallaCuestionario extends Pantalla {
         this.opcion=this.opciones[this.dialogo];
     }
     draw() {
-        background(200, 75, 190);
+        background(10);
+        fill(255);
+        image(this.foto,0,0);
         fill(0);
         rect(0, 300, width, 180);
         this.pasarTexto();
@@ -28,9 +33,9 @@ class PantallaCuestionario extends Pantalla {
         fill(255);
         textAlign(LEFT);
         textSize(21);
-        this.textoEnPantalla = (this.texto[this.dialogo] + ' (espacio)');
+        this.textoEnPantalla = (this.texto[this.dialogo] + '    (espacio)');
         fill(255);
-        text(this.textoEnPantalla, 30, 330);
+        text(this.textoEnPantalla, 30, 330, 340);
         this.opcion=this.opciones[this.dialogo];
         this.pasarOpciones();
     }
@@ -46,6 +51,7 @@ class PantallaCuestionario extends Pantalla {
         if (this.dialogo < this.texto.length - 1) {
             this.dialogo++;
         } else {
+            this.siguiente();
         }
     }
 }

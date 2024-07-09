@@ -42,7 +42,6 @@ class Navegador {
 
 class Pantalla {
     constructor() {
-        // ...
     }
 
     estado() {
@@ -82,5 +81,8 @@ class Pantalla {
 
     continuar() {
 
+    }
+
+    checkPregunta(){
     }
 }
