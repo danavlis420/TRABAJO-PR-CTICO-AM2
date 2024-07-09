@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Práctico AM2</title>
 
-  <title>Abstracción</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-  <!-- BOTÓN FULLSCREEN -->
-  <input id="fullscreen" type="image" src="recursos/fullscreen.png" onclick="fullScreen()">
+    <!-- BOTÓN FULLSCREEN -->
+   <input id="fullscreen" type="image" src="recursos/fullscreen.png" onclick="fullScreen()">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="navegador.js"></script>
+    <script src="inicio.js"></script>
+    <script src="cuestionario.js"></script>
+    <script src="pantalla01.js"></script>
+    <script src="pantalla02.js"></script>
+    <script src="pantalla03.js"></script>
+  </head>
 
-  <script src="libraries/p5.min.js"></script>
-  <script src="navegador.js"></script>
-  <script src="inicio.js"></script>
-  <script src="menu.js"></script>
-  <script src="final.js"></script>
-  <script src="escena01.js"></script>
-  <script src="escena02.js"></script>
-  <script src="escena03.js"></script>
-  <script>
-    function fullScreen() {
+  <body>
+    <script src="sketch.js"></script>
+    <script>
+      function fullScreen() {
       if ((document.fullScreenElement && document.fullScreenElement !== null) ||
         (!document.mozFullScreen && !document.webkitIsFullScreen)) {
         if (document.documentElement.requestFullScreen) {
@@ -41,12 +44,6 @@
         }
       }
     }
-  </script>
-
-</head>
-
-<body>
-  <script src="sketch.js"></script>
-</body>
-
+    </script>
+  </body>
 </html>

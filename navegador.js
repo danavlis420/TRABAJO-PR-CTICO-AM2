@@ -48,4 +48,12 @@ class Pantalla {
     draw() {
         // ...
     }
+
+    mouseClicked() {
+        // ...
+    }
+
+    keyTyped() {
+        // ...
+    }
 }
