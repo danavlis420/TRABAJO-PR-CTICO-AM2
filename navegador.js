@@ -8,7 +8,7 @@ class Navegador {
 
     agregarPantalla(p) {
         this.pantallas.push(p);
-        if(!this.pantallaActual) { this.pantallaActual = p; }
+        if (!this.pantallaActual) { this.pantallaActual = p; }
     }
 
     proximaPantalla() {
@@ -19,18 +19,18 @@ class Navegador {
 
     previaPantalla() {
         let i = (this.indicePantalla - 1);
-        if(i < 0) { i = this.pantallas.length - 1; }
+        if (i < 0) { i = this.pantallas.length - 1; }
         this.pantallaActual = this.pantallas[i];
         this.indicePantalla = i;
     }
 
     elegirPantalla(i) {
-        if(this.pantallas.length == 0) {
+        if (this.pantallas.length == 0) {
             print('Error, no hay escenas en la lista de escenas');
             return
         }
 
-        if(i >= this.pantallas.length || i < 0) {
+        if (i >= this.pantallas.length || i < 0) {
             print(`Error, la escena ${i} no existe`);
             return
         }
@@ -45,6 +45,17 @@ class Pantalla {
         // ...
     }
 
+    estado() {
+
+    }
+
+    siguiente() {
+        if (pantalla_inicio == false) {
+            navegador.proximaPantalla();
+            navegador.pantallaActual.estado();
+        }
+    }
+
     draw() {
         // ...
     }
@@ -53,7 +64,23 @@ class Pantalla {
         // ...
     }
 
-    keyTyped() {
+    keyPressed() {
         // ...
+    }
+
+    pasarTexto() {
+
+    }
+
+    pasarOpciones() {
+
+    }
+
+    elegirOpcion() {
+
+    }
+
+    continuar() {
+
     }
 }
