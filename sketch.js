@@ -4,6 +4,7 @@ const navegador = new Navegador();
 
 //IMG
 let imgIntro;
+let imgIntro2;
 let imgCuestionario;
 let imgEscena1;
 let imgLector1;
@@ -39,6 +40,7 @@ let eleccionJ2;
 
 function preload() {
   imgIntro = loadImage("recursos/placehold.jpg");
+  imgIntro = loadImage("recursos/intro2.jpg");
   imgCuestionario = loadImage("recursos/placehold2.jpg");
   imgEscena1 = loadImage("recursos/placehold1.jpg");
   imgLector1 = loadImage("recursos/placehold1.jpg");

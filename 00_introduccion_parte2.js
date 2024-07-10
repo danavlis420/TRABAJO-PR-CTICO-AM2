@@ -5,8 +5,8 @@ class PantallaIntro2 extends Pantalla {
         modulo = 1;
         this.dialogo1 = 0;
         this.dialogo2 = 0;
-        this.foto1=imgIntro;
-        this.foto2=imgIntro;
+        this.foto1=imgIntro2;
+        this.foto2=imgIntro2;
         userTurno1=false;
         userTurno2=false;
     }
