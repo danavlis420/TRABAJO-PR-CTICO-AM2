@@ -5,8 +5,8 @@ class Pantalla07 extends Pantalla {
         modulo = 1;
         this.dialogo1 = 0;
         this.dialogo2 = 0;
-        this.foto1 = imgEscena1;
-        this.foto2 = imgEscena1;
+        this.foto1 = imgLector5;
+        this.foto2 = imgLector5;
         userTurno1 = false;
         userTurno2 = false;
         userListos = false;
@@ -21,7 +21,7 @@ class Pantalla07 extends Pantalla {
         this.foto2;
         this.dialogo1;
         this.dialogo2;
-        this.textoGlobal = ['*Vuelves a escuchar el sonido* AHÍ ESTÁ! El peligro es real, no confíes en lo que ves', 'siempre debes tener valor, tu vida podría depender de ello', 'Mis manos y mi mente no pueden más, es tu última chance antes de irnos, abres la puerta y ¿qué haces?'];
+        this.textoGlobal = ['*Vuelves a escuchar el sonido* AHÍ ESTÁ! El peligro es real, no confíes en lo que ves', 'siempre debes tener valor, tu vida podría depender de ello', 'Mis manos y mi mente no pueden más, es tu última chance antes de irnos', 'abres la puerta y ¿qué haces?'];
         this.texto1 = this.textoGlobal;
         this.texto2 = this.textoGlobal;
         this.textoEnPantalla1;

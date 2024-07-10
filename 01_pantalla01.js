@@ -5,8 +5,8 @@ class Pantalla01 extends Pantalla {
         modulo = 1;
         this.dialogo1 = 0;
         this.dialogo2 = 0;
-        this.foto1 = imgEscena1;
-        this.foto2 = imgEscena1;
+        this.foto1 = imgLector1;
+        this.foto2 = imgLector1;
         userTurno1 = false;
         userTurno2 = false;
         userListos = false;
@@ -48,6 +48,12 @@ class Pantalla01 extends Pantalla {
         rect(600, 300, 400, 180);
         this.mostrarTexto1();
         this.mostrarTexto2();
+        if (this.dialogo1>3){
+            this.foto1 = imgLector3;
+        }
+        if (this.dialogo2>3){
+            this.foto2 = imgLector3;
+        }
         if (this.dialogo1==this.texto1.length-1){
             pregunta_pendiente1=true;
             this.eligeJ1();

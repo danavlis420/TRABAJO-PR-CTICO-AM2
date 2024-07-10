@@ -6,6 +6,11 @@ const navegador = new Navegador();
 let imgIntro;
 let imgCuestionario;
 let imgEscena1;
+let imgLector1;
+let imgLector2;
+let imgLector3;
+let imgLector4;
+let imgLector5;
 
 //CONTROLES
 let keyAvanzar1 = 'w';
@@ -36,6 +41,11 @@ function preload() {
   imgIntro = loadImage("recursos/placehold.jpg");
   imgCuestionario = loadImage("recursos/placehold2.jpg");
   imgEscena1 = loadImage("recursos/placehold1.jpg");
+  imgLector1 = loadImage("recursos/placehold1.jpg");
+  imgLector2 = loadImage("recursos/libro.jpg");
+  imgLector3 = loadImage("recursos/placehold2.jpg");
+  imgLector4 = loadImage("recursos/ventana_afuera.jpg");
+  imgLector5 = loadImage("recursos/latidos.gif");
 }
 
 function setup() {
