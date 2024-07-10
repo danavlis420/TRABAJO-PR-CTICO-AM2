@@ -1,10 +1,36 @@
 
+//NAVEGADOR
 const navegador = new Navegador();
-let pantalla_inicio = true;
-let modulo;
+
+//IMG
 let imgIntro;
 let imgCuestionario;
 let imgEscena1;
+
+//CONTROLES
+let keyAvanzar1 = 'w';
+let keyVolver1 = 'q';
+let keyOpcionA1 = 'a';
+let keyOpcionB1 = 's';
+let keyOpcionC1 = 'd';
+let keyAvanzar2 = 'o';
+let keyVolver2 = 'i';
+let keyOpcionA2 = 'j';
+let keyOpcionB2 = 'k';
+let keyOpcionC2 = 'l';
+
+//LOGICA
+let pantalla_inicio = true;
+let modulo;
+let userTurno1;
+let userTurno2;
+let pregunta_pendiente1;
+let pregunta_pendiente2;
+let respuesta1;
+let respuesta2;
+let userListos;
+let eleccionJ1;
+let eleccionJ2;
 
 function preload() {
   imgIntro = loadImage("recursos/placehold.jpg");
@@ -13,17 +39,17 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 480);
+  createCanvas(1000, 520);
 
   modulo = 0;
 
   let p = new PantallaInicio();
   navegador.agregarPantalla(p);
 
-  p = new PantallaIntro();
+  p = new PantallaIntro1();
   navegador.agregarPantalla(p);
 
-  p = new PantallaCuestionario();
+  p = new PantallaIntro2();
   navegador.agregarPantalla(p);
 
   p = new Pantalla01();
@@ -35,17 +61,28 @@ function setup() {
   p = new Pantalla03();
   navegador.agregarPantalla(p);
 
+  p = new Pantalla04();
+  navegador.agregarPantalla(p);
+
+  p = new Pantalla05();
+  navegador.agregarPantalla(p);
+
+  p = new Pantalla06();
+  navegador.agregarPantalla(p);
+
+  p = new Pantalla07();
+  navegador.agregarPantalla(p);
+
+  p = new Final();
+  navegador.agregarPantalla(p);
 }
 
 function draw() {
-  background(220);
+  noStroke();
   navegador.pantallaActual.draw();
 }
 
 function keyPressed() {
-  if (key == ' ') {
-    navegador.pantallaActual.continuar();
-  }
   if (keyCode === ENTER && pantalla_inicio) {
     navegador.elegirPantalla(1);
     navegador.pantallaActual.estado();
@@ -74,5 +111,41 @@ function keyPressed() {
   if (key == '5') {
     navegador.elegirPantalla(5);
     navegador.pantallaActual.estado();
+  }
+  if (key == keyAvanzar1) {
+    navegador.pantallaActual.continuar1();
+  }
+  if (key == keyAvanzar2) {
+    navegador.pantallaActual.continuar2();
+  }
+  if (key == keyVolver1) {
+    navegador.pantallaActual.volver1();
+  }
+  if (key == keyVolver2) {
+    navegador.pantallaActual.volver2();
+  }
+  if (key == keyOpcionA1) {
+    respuesta1=0;
+    navegador.pantallaActual.cambiar1();
+  }
+  if (key == keyOpcionB1) {
+    respuesta1=1;
+    navegador.pantallaActual.cambiar1();
+  }
+  if (key == keyOpcionC1) {
+    respuesta1=2;
+    navegador.pantallaActual.cambiar1();
+  }
+  if (key == keyOpcionA2) {
+    respuesta2=0;
+    navegador.pantallaActual.cambiar2();
+  }
+  if (key == keyOpcionB2) {
+    respuesta2=1;
+    navegador.pantallaActual.cambiar2();
+  }
+  if (key == keyOpcionC2) {
+    respuesta2=2,
+    navegador.pantallaActual.cambiar2();
   }
 }

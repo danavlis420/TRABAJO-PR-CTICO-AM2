@@ -1,4 +1,4 @@
-class Final extends Pantalla {
+class PantallaInicio extends Pantalla {
     estado(){
         clear();
         pantalla_inicio=true;
@@ -9,6 +9,6 @@ class Final extends Pantalla {
         fill(0);
         textAlign(CENTER);
         textSize(21);
-        text("Presiona 'ESC' para volver al inicio", width/2, height/2 + 80);
+        text("Presiona 'ENTER' para comenzar", width/2, height/2 + 80);
     }
 }

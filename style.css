@@ -20,3 +20,23 @@ canvas {
   top: 20px;
   right: 20px; 
 }
+
+#help1 {
+  background-color: rgba(10,10,10,0.3);
+  color:antiquewhite;
+  position: fixed;
+  top: auto;
+  left: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+#help2 {
+  background-color: rgba(10,10,10,0.3);
+  color:antiquewhite;
+  position: fixed;
+  top: auto;
+  right: 20px;
+  margin: 20px;
+  padding: 20px;
+}
